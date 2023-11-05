@@ -11,9 +11,7 @@ int main()
 {
     setlocale(LC_ALL, "ru");
     int n = 0;
-    //первое число
     double p = 0;
-    //второе число
     double v = 0;
     bool flag = true;
     cout << "Целое число N: "; cin >> n;
@@ -22,14 +20,18 @@ int main()
     for (int i = 0; i < n - 1; i++) {
         cin >> v;
         if (v >= p)
-
         {
             flag = false;
             break;
         }
-        //замена чисел, чтобы пройтись по всем
+        else
+        {
+            flag = true;
+        }
+        
+        }
         p = v;
-    }
+    
     //проверка
     if (flag)
         cout << "true";
